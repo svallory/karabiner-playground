@@ -1,0 +1,22 @@
+{
+  "name": "karabiner.ts.playground",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "karabiner.ts": "latest"
+  },
+  "devDependencies": {
+    "vite": "^4.3.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "all",
+    "bracketSameLine": true
+  }
+}
