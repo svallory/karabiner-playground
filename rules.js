@@ -29,11 +29,15 @@ import {
   withMapper,
 } from 'karabiner.ts'
 
-export const rules = () => [
-  // rule(), layer(), simlayer(), hyperLayer(), duoLayer()
-  rule('Playground').manipulators([
-    // Docs: https://evan-liu.github.io/karabiner.ts/
+// Docs: https://evan-liu.github.io/karabiner.ts/
+export const rules = () => {
+  const a = 'a'.charCodeAt(0)
+  const z = 'z'.charCodeAt(0)
+  const letter_keys = []
 
-    map('⇪').toHyper().toIfAlone('⎋'),
-  ]),
-]
+  for (let i = a; i <= z; i++) {
+    letter_keys.push(String.fromCharCode(i))
+  }
+
+  return [import('./rules/hyperize-all-letters')]
+}
