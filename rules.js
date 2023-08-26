@@ -1,3 +1,4 @@
+/**
 import {
   // rule and layers
   rule,
@@ -28,16 +29,11 @@ import {
   withCondition,
   withMapper,
 } from 'karabiner.ts'
+**/
+
+import HyperAllLetters from './rules/hyperize-all-letters'
+
+console.log('HyperAllLetters', HyperAllLetters)
 
 // Docs: https://evan-liu.github.io/karabiner.ts/
-export const rules = () => {
-  const a = 'a'.charCodeAt(0)
-  const z = 'z'.charCodeAt(0)
-  const letter_keys = []
-
-  for (let i = a; i <= z; i++) {
-    letter_keys.push(String.fromCharCode(i))
-  }
-
-  return [import('./rules/hyperize-all-letters')]
-}
+export const rules = () => [HyperAllLetters]
